@@ -1,0 +1,54 @@
+name: FPSBoostPlugin
+version: 1.0.0
+main: com.fpsboost.plugin.FPSBoostPlugin
+api-version: 1.21
+author: SlayerGamerYT
+description: A comprehensive FPS optimization plugin for Minecraft 1.21.7+ servers
+website: https://github.com/SGYT0007/Minecraft-FPS-Boost-Plugin/
+
+commands:
+  fps:
+    description: Display current FPS and performance statistics
+    usage: /fps [player]
+    permission: fpsboost.fps
+    aliases: [framerate, performance]
+  
+  fpsboost:
+    description: Main FPS boost plugin commands
+    usage: /fpsboost <reload|toggle|status|config>
+    permission: fpsboost.admin
+    aliases: [fpb]
+  
+  togglefps:
+    description: Toggle FPS optimizations on/off
+    usage: /togglefps [feature]
+    permission: fpsboost.toggle
+
+permissions:
+  fpsboost.*:
+    description: Grants all FPS boost permissions
+    default: op
+    children:
+      fpsboost.admin: true
+      fpsboost.fps: true
+      fpsboost.toggle: true
+      fpsboost.bypass: true
+  
+  fpsboost.admin:
+    description: Access to admin commands
+    default: op
+  
+  fpsboost.fps:
+    description: View FPS statistics
+    default: true
+  
+  fpsboost.toggle:
+    description: Toggle FPS features
+    default: true
+  
+  fpsboost.bypass:
+    description: Bypass FPS optimizations
+    default: op
+
+depend: []
+softdepend: [WorldEdit, WorldGuard, ProtocolLib]

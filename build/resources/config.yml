@@ -1,0 +1,149 @@
+# FPS Boost Plugin Configuration
+# Plugin Version: 1.0.0
+# Compatible with Minecraft 1.21.7+
+
+# General Settings
+general:
+  enabled: true
+  debug: false
+  auto-update-check: true
+  metrics: true
+
+# FPS Display Settings
+fps-display:
+  enabled: true
+  update-interval: 1000  # milliseconds
+  display-format: "&a[FPS] &f{fps} &7| &aTPS: &f{tps}"
+  show-on-join: true
+  actionbar-display: true
+  chat-display: false
+
+# Performance Optimizations
+optimizations:
+  # Dynamic rendering based on player distance
+  dynamic-rendering:
+    enabled: true
+    entity-render-distance: 32
+    tile-entity-render-distance: 16
+    particle-render-distance: 24
+    
+  # Entity optimizations
+  entity-optimizations:
+    enabled: true
+    max-entities-per-chunk: 50
+    remove-excess-items: true
+    item-merge-radius: 2.0
+    mob-spawn-limit: true
+    
+  # Particle system optimizations
+  particle-optimizations:
+    enabled: true
+    reduce-particles: true
+    particle-limit-per-player: 100
+    disable-redstone-particles: false
+    disable-water-particles: false
+    
+  # Chunk optimizations
+  chunk-optimizations:
+    enabled: true
+    async-chunk-loading: true
+    preload-chunks: true
+    unload-empty-chunks: true
+    chunk-gc-period: 300 # seconds
+    
+  # Visual effect optimizations
+  visual-effects:
+    enabled: true
+    reduce-lighting-updates: true
+    disable-weather-particles: false
+    reduce-block-animations: false
+    optimize-item-frames: true
+
+# Performance thresholds
+thresholds:
+  # TPS thresholds for automatic optimizations
+  tps:
+    warning: 18.0
+    critical: 15.0
+    emergency: 10.0
+    
+  # Memory usage thresholds (percentage)
+  memory:
+    warning: 70
+    critical: 85
+    emergency: 95
+    
+  # Player count thresholds for scaling optimizations
+  players:
+    medium-load: 20
+    high-load: 50
+    extreme-load: 100
+
+# Automatic optimization scaling
+auto-scaling:
+  enabled: true
+  check-interval: 30 # seconds
+  
+  # Actions to take at different performance levels
+  actions:
+    warning:
+      - reduce-particle-distance
+      - limit-entity-spawning
+    critical:
+      - disable-non-essential-particles
+      - reduce-render-distance
+      - increase-chunk-gc-frequency
+    emergency:
+      - disable-all-particles
+      - minimal-render-distance
+      - aggressive-entity-cleanup
+
+# Individual player settings
+player-settings:
+  allow-individual-settings: true
+  default-optimizations: true
+  save-preferences: true
+
+# Commands and messaging
+messages:
+  prefix: "&8[&6FPS&8] "
+  no-permission: "&cYou don't have permission to use this command!"
+  config-reloaded: "&aConfiguration reloaded successfully!"
+  feature-enabled: "&aFeature '{feature}' has been enabled!"
+  feature-disabled: "&cFeature '{feature}' has been disabled!"
+  fps-display: "&aYour FPS: &f{fps} &7| Server TPS: &f{tps}"
+  performance-warning: "&eServer performance is degrading! Enabling optimizations..."
+
+# Compatibility settings
+compatibility:
+  # Plugin compatibility checks
+  check-conflicts: true
+  
+  # Known compatible plugins
+  compatible-plugins:
+    - "WorldEdit"
+    - "WorldGuard" 
+    - "ProtocolLib"
+    - "LuckPerms"
+    - "Vault"
+    
+  # Plugins that may cause conflicts
+  conflicting-plugins:
+    - "OptiFine" # Client-side mod
+    - "OldFPSBoost" # Example conflicting plugin
+
+# Advanced settings (modify with caution)
+advanced:
+  # Packet optimization
+  optimize-packets: true
+  packet-compression-threshold: 256
+  
+  # Thread pool settings
+  async-thread-pool-size: 4
+  
+  # Cache settings
+  enable-caching: true
+  cache-cleanup-interval: 600 # seconds
+  
+  # Experimental features
+  experimental-optimizations: false

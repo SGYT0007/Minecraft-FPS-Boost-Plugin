@@ -1,0 +1,334 @@
+# ULTRA-PERFORMANCE FPS BOOST PLUGIN CONFIGURATION
+# Designed for MAXIMUM server-side performance optimization
+# Plugin Version: 3.0.0 - Ultra Performance Edition
+# Author: SlayerGamerYT
+# Compatible with Minecraft 1.21.7+
+
+# ==========================================
+# GENERAL ULTRA-PERFORMANCE SETTINGS
+# ==========================================
+general:
+  enabled: true
+  debug: false  # Disable for production for maximum performance
+  auto-update-check: false  # Disable to reduce network overhead
+  metrics: false  # Disable for maximum performance
+  ultra-performance-mode: true  # Enable all ultra optimizations
+
+# ==========================================
+# ULTRA-HIGH FREQUENCY PERFORMANCE MONITORING
+# ==========================================
+performance-monitoring:
+  enabled: true
+  check-interval: 5  # Ultra-fast 5-second checks
+  tps-monitoring: true
+  memory-monitoring: true
+  thread-monitoring: true
+  
+# ==========================================
+# ADVANCED THREAD POOL CONFIGURATION
+# ==========================================
+threading:
+  entity-processor-threads: 8  # Utilize multiple cores
+  chunk-processor-threads: 4
+  memory-optimizer-threads: 2
+  scheduled-executor-threads: 4
+  work-stealing-pool: true  # Enable work-stealing for better CPU utilization
+
+# ==========================================
+# ULTRA ENTITY OPTIMIZATIONS
+# ==========================================
+ultra-entity-optimizations:
+  enabled: true
+  processing-interval: 20  # Every second for ultra-responsiveness
+  max-entities-per-chunk: 150  # Very high limit to allow normal gameplay
+  max-items-per-chunk: 64     # Allow normal item stacking behavior
+  
+  # Intelligent entity removal - DISABLED for normal gameplay
+  remove-excess-items: false  # Allow normal item behavior
+  remove-excess-mobs: false  # Allow normal mob spawning
+  mob-removal-chance: 0.0    # No mob removal chance
+  item-removal-chance: 0.0   # No item removal chance
+  
+  # Item merging - OPTIONAL for performance
+  item-merge-enabled: false  # Disabled for normal item behavior
+  item-merge-radius: 3.5
+  item-merge-interval: 60    # Much slower interval if enabled
+  
+  # Entity priority processing
+  priority-processing: true
+  high-priority-entities: ["PLAYER", "VILLAGER", "ITEM_FRAME", "ARMOR_STAND"]
+  low-priority-entities: ["ITEM", "ARROW", "EXPERIENCE_ORB"]
+  
+  # Spatial indexing for O(1) lookups
+  spatial-indexing: true
+  spatial-index-update-interval: 20
+
+# ==========================================
+# INTELLIGENT CHUNK MANAGEMENT ULTRA
+# ==========================================
+intelligent-chunk-management:
+  enabled: true
+  processing-interval: 30  # Every 1.5 seconds
+  
+  # Predictive chunk loading
+  predictive-loading: true
+  preload-radius: 3  # Larger radius for smoother gameplay
+  preload-based-on-velocity: true
+  
+  # Aggressive chunk unloading
+  unload-empty-chunks: true
+  chunk-empty-timeout: 30  # 30 seconds before considering empty
+  max-chunks-unload-per-tick: 5
+  
+  # Chunk access tracking
+  track-chunk-access: true
+  access-history-size: 1000
+  
+  # Critical chunk protection
+  protect-spawn-chunks: true
+  protect-player-chunks: true
+  protect-structure-chunks: true
+
+# ==========================================
+# ADVANCED MEMORY OPTIMIZATION ULTRA
+# ==========================================
+advanced-memory-optimization:
+  enabled: true
+  optimization-interval: 60  # Every 3 seconds for aggressive optimization
+  
+  # Memory thresholds (more aggressive)
+  warning-threshold: 60  # 60% memory usage
+  critical-threshold: 75  # 75% memory usage
+  emergency-threshold: 90  # 90% memory usage
+  
+  # Emergency cleanup settings - Only for extreme situations
+  emergency-cleanup-enabled: true
+  emergency-item-cleanup-limit: 5000  # Higher threshold
+  emergency-mob-cleanup-enabled: false  # Never cleanup mobs
+  
+  # Garbage collection optimization
+  gc-optimization: true
+  suggest-gc-threshold: 0.7  # Suggest GC at 70% memory
+  gc-suggestion-interval: 60000  # Every minute
+  
+  # Cache management
+  cache-cleanup-interval: 300  # Every 15 seconds
+  max-cache-entries: 500
+  
+  # Memory monitoring
+  memory-leak-detection: true
+  memory-usage-logging: true
+
+# ==========================================
+# REAL-TIME PERFORMANCE SCALING ULTRA
+# ==========================================
+real-time-scaling:
+  enabled: true
+  scaling-interval: 10  # Every 0.5 seconds for ultra-responsiveness
+  
+  # TPS-based scaling (more aggressive thresholds)
+  tps-scaling:
+    excellent: 19.5  # Above 19.5 TPS = light optimizations
+    good: 18.0       # Above 18.0 TPS = moderate optimizations
+    warning: 16.0    # Above 16.0 TPS = aggressive optimizations
+    critical: 12.0   # Below 12.0 TPS = emergency optimizations
+  
+  # Player-count scaling
+  player-scaling:
+    small-server: 10    # < 10 players
+    medium-server: 30   # 10-30 players
+    large-server: 60    # 30-60 players
+    mega-server: 100    # 60+ players
+  
+  # Dynamic optimization adjustment
+  dynamic-adjustment: true
+  adjustment-sensitivity: 0.95  # High sensitivity
+  
+# ==========================================
+# CPU CACHE OPTIMIZATION
+# ==========================================
+cpu-optimization:
+  enabled: true
+  cache-friendly-algorithms: true
+  minimize-object-creation: true
+  reuse-collections: true
+  optimize-loops: true
+  
+  # JIT compilation hints
+  jit-optimization-hints: true
+  hotspot-optimization: true
+
+# ==========================================
+# PACKET AND NETWORK OPTIMIZATION
+# ==========================================
+network-optimization:
+  enabled: true
+  
+  # Packet batching for better performance
+  packet-batching: true
+  batch-size: 50
+  batch-timeout: 50  # milliseconds
+  
+  # Compression optimization
+  dynamic-compression: true
+  compression-threshold: 128  # Smaller threshold for better performance
+  
+  # Network queue optimization
+  optimize-packet-queue: true
+  queue-processing-threads: 2
+
+# ==========================================
+# ULTRA PARTICLE AND VISUAL OPTIMIZATIONS
+# ==========================================
+visual-optimizations:
+  enabled: true
+  
+  # Aggressive particle reduction
+  particle-optimization: true
+  max-particles-per-player: 50  # Very strict limit
+  particle-distance-limit: 16   # Shorter distance
+  
+  # Disable expensive particles
+  disable-redstone-particles: true
+  disable-water-particles: true
+  disable-lava-particles: true
+  disable-smoke-particles: true
+  
+  # Block update optimization
+  optimize-block-updates: true
+  batch-block-updates: true
+  block-update-batch-size: 100
+  
+  # Lighting optimization
+  optimize-lighting: true
+  lighting-update-batch-size: 64
+
+# ==========================================
+# EMERGENCY OPTIMIZATION PROTOCOLS
+# ==========================================
+emergency-protocols:
+  enabled: true
+  
+  # Automatic emergency activation
+  auto-emergency-activation: true
+  emergency-tps-threshold: 10.0
+  emergency-memory-threshold: 95
+  
+  # Emergency actions
+  emergency-actions:
+    - "disable-all-particles"
+    - "force-chunk-unloading"
+    - "reduce-render-distance"
+    - "disable-non-essential-features"
+    - "suggest-garbage-collection"
+    - "optimize-thread-usage"
+  
+  # Recovery settings
+  recovery-tps-threshold: 18.0
+  recovery-delay: 60000  # 1 minute before recovering
+  
+# ==========================================
+# PERFORMANCE STATISTICS AND MONITORING
+# ==========================================
+statistics:
+  enabled: true
+  detailed-logging: false  # Disable for production
+  
+  # Statistics collection
+  collect-entity-stats: true
+  collect-chunk-stats: true
+  collect-memory-stats: true
+  collect-performance-stats: true
+  
+  # Statistics reporting
+  stats-report-interval: 300  # Every 5 minutes
+  stats-retention-time: 3600   # Keep stats for 1 hour
+  
+  # Performance alerts
+  performance-alerts: true
+  alert-tps-threshold: 15.0
+  alert-memory-threshold: 85
+
+# ==========================================
+# COMPATIBILITY AND SAFETY
+# ==========================================
+compatibility:
+  # Plugin compatibility checks
+  check-conflicts: false  # Disable for performance
+  
+  # Safe optimization limits
+  max-entities-removed-per-tick: 100
+  max-chunks-processed-per-tick: 50
+  max-memory-cleanup-time: 100  # milliseconds
+  
+  # Backup and rollback
+  enable-optimization-rollback: true
+  rollback-on-critical-errors: true
+
+# ==========================================
+# COMMAND CONFIGURATION
+# ==========================================
+commands:
+  # Performance commands
+  fps-command: true
+  performance-command: true
+  optimize-command: true
+  emergency-command: true
+  
+  # Statistics commands
+  stats-command: true
+  metrics-command: true
+  
+# ==========================================
+# MESSAGING (MINIMAL FOR PERFORMANCE)
+# ==========================================
+messages:
+  prefix: "&8[&6ULTRA-FPS&8] "
+  optimization-started: "&aUltra optimizations activated!"
+  optimization-stopped: "&cOptimizations deactivated"
+  emergency-mode: "&c&lEMERGENCY OPTIMIZATIONS ACTIVE!"
+  performance-restored: "&aServer performance restored"
+  
+# ==========================================
+# ADVANCED DEVELOPER SETTINGS
+# ==========================================
+developer:
+  # Performance profiling
+  enable-profiling: false  # Only for debugging
+  profiling-interval: 30000
+  
+  # Debug settings
+  verbose-logging: false
+  trace-optimizations: false
+  benchmark-mode: false
+  
+  # Experimental features
+  experimental-optimizations: true
+  use-unsafe-optimizations: false  # Use with caution
+  
+  # JVM tuning recommendations
+  recommended-jvm-flags:
+    - "-XX:+UseG1GC"
+    - "-XX:+UnlockExperimentalVMOptions"
+    - "-XX:MaxGCPauseMillis=50"
+    - "-XX:+DisableExplicitGC"
+    - "-XX:TargetSurvivorRatio=90"
+    - "-XX:G1NewSizePercent=50"
+    - "-XX:G1MaxNewSizePercent=80"
+    - "-XX:+UseStringDeduplication"
+    - "-XX:+OptimizeStringConcat"
+
+# ==========================================
+# PERFORMANCE TARGETS
+# ==========================================
+performance-targets:
+  target-tps: 20.0
+  target-memory-usage: 70  # percent
+  target-entity-count: 1000
+  target-chunk-count: 500
+  
+  # Optimization goals
+  minimize-lag-spikes: true
+  maintain-stable-tps: true
+  optimize-memory-usage: true
+  maximize-player-experience: true
